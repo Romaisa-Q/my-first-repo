@@ -1,0 +1,145 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Top Bar */
+.top-bar {
+    background: linear-gradient(to right, #6C63FF, #A65FFF);
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.topsection{
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 115px;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.search-section {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    padding : 3px 10px;
+}
+
+.search-section button {
+    padding: 5px 10px;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+    border: none;
+}
+
+.search-icon {
+    color: rgb(18, 17, 17);
+   padding-top: 3px;
+   
+}
+.material-icons {
+    font-size: 10px; 
+}
+
+
+.host {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Filters Section */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 20px;
+    
+}
+
+.filters button {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .search-section {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .filters {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px; 
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.rating {
+    position: absolute;
+    top: 10px;
+    background: white;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    left: 10px;
+    border-radius: 10px;
+}
+.card-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;  
+    padding: 20px 10px; 
+    background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+    color: white;
+    border-radius: 0 0 5px 5px; /* Sirf neeche curve karne kay liye */
+    font-size: 10px;
+}
