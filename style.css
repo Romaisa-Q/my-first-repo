@@ -1,10 +1,12 @@
-/* General Styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
-
-/* Top Bar */
 .top-bar {
     background: linear-gradient(to right, #6C63FF, #A65FFF);
     color: white;
@@ -15,9 +17,9 @@ body {
 }
 .topsection{
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    padding-left: 50px;
-    padding-right: 50px;
-    height: 115px;
+    height: auto;
+    padding: 0 100px;
+
 }
 .navbar {
     display: flex;
@@ -56,12 +58,10 @@ body {
     font-size: 10px; 
 }
 
-
 .host {
     font-weight: bold;
     cursor: pointer;
 }
-
 /* Filters Section */
 .filters {
     display: flex;
@@ -70,7 +70,6 @@ body {
     padding: 15px 20px;
     
 }
-
 .filters button {
     padding: 8px 12px;
     border: 1px solid #ddd;
@@ -79,9 +78,8 @@ body {
     cursor: pointer;
     font-size: 14px;
 }
-
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .navbar {
         flex-direction: column;
         gap: 10px;
@@ -89,19 +87,20 @@ body {
     
     .search-section {
         flex-wrap: wrap;
-        justify-content: center;
+        height: auto;
+        font-size: small;
     }
 
     .filters {
-        justify-content: center;
         flex-wrap: wrap;
+        height: auto;
     }
 }
 .container {
     max-width: 1000px;
     margin: 20px auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
     gap: 20px; 
     padding-left: 50px;
     padding-right: 50px;
@@ -137,9 +136,21 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;  
-    padding: 20px 10px; 
+     padding: 20px 10px;   /* Top aur Bottom Padding: 20px ,Left aur Right Padding: 10px */                      
     background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
     color: white;
-    border-radius: 0 0 5px 5px; /* Sirf neeche curve karne kay liye */
     font-size: 10px;
+}
+@media (max-width: 495px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
+        margin:20px;
+    }
+    .card {
+        height: 200px;
+    }
+    .card-text, .rating{
+        font-size: 10px;
+    }
 }
